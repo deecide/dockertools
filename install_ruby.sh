@@ -1,8 +1,9 @@
 #!/bin/bash
 
 VERSION=$1
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-ARCHIVE="${SCRIPT_DIR}/ruby/ruby-${VERSION}.tar.gz"
 
-tar -xzf "$ARCHIVE" -C /
+curl -O https://igrubies.s3.eu-west-3.amazonaws.com/ruby-$VERSION.tar.gz
+
+tar -xzf ruby-$VERSION.tar.gz -C /
+rm ruby-$VERSION.tar.gz
 gem install bundler

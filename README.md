@@ -41,11 +41,5 @@ cd ruby/
 ./build.sh 3.1.2
 ```
 
-### Test it:
+Then upload it to S3
 
-Will create a new container, use the local install script and archive, and check
-
-```basgh
-cd ruby/
-./test.sh 3.4.4
-```
