@@ -3,8 +3,6 @@
 ## Usage
 
 ```Dockerfile
-FROM ogarcia/archlinux:devel AS builder
-
 # Get dockertools
 RUN curl https://codeload.github.com/deecide/dockertools/tar.gz/refs/heads/master -o dockertools.tar.gz && \
     tar -xzf dockertools.tar.gz -C / && \
