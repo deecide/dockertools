@@ -6,5 +6,5 @@ su - ab -c "git clone https://aur.archlinux.org/yay.git"
 su - ab -c "cd yay && makepkg -si --noconfirm"
 su - ab -c "yay -S --noconfirm $@"
 rm -rf /home/ab/
-pacman -Rns --confirm yay
-pacman -Rns --confirm $(pacman -Qdtq)
+pacman -Rns --noconfirm yay
+pacman -Rns --noconfirm $(pacman -Qdtq)
