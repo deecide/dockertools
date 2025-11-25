@@ -20,7 +20,7 @@ RUN /dockertools-master/install_ruby.sh 3.4.4
 
 # Install yay (AUR)
 # Make sure you first install_packages.sh git
-RUN /dockertools-master/install_yay.sh
+RUN /dockertools-master/install_yay.sh mongodb-tools-bin postgresql17-libs
 
 # Remove
 RUN rm -rf /dockertools-master
