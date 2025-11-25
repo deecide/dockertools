@@ -15,8 +15,12 @@ RUN /dockertools-master/install_packages.sh libjpeg-turbo pngquant optipng gifsi
 RUN /dockertools-master/install_node.sh 22.20.0
 
 # Install ruby
-RUN /dockertools-master/install_packages.sh libyaml
+# Make sure you first install_packages.sh libyaml
 RUN /dockertools-master/install_ruby.sh 3.4.4
+
+# Install yay (AUR)
+# Make sure you first install_packages.sh git
+RUN /dockertools-master/install_yay.sh
 
 # Remove
 RUN rm -rf /dockertools-master
