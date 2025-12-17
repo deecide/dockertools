@@ -21,9 +21,6 @@ RUN /dockertools-master/install_ruby.sh 3.4.4
 # Install yay (AUR)
 # Make sure you first install_packages.sh git
 RUN /dockertools-master/install_yay.sh mongodb-tools-bin postgresql17-libs
-
-# Remove
-RUN rm -rf /dockertools-master
 ```
 
 ## Prepare Ruby
@@ -35,11 +32,11 @@ Process:
 - starts a Docker container from Arch
 - builds ruby
 - tars it into ruby-x.x.x.tar.gz
+- uploads to S3
+
+Make sure ruby/.env is correct, then:
 
 ```bash
 cd ruby/
 ./build.sh 3.1.2
 ```
-
-Then upload it to S3
-
