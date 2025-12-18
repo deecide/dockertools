@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 VERSION=$1
 FILENAME=ruby-$VERSION-$(uname -m).tar.gz
