@@ -5,9 +5,9 @@ if [ "$(uname -m)" = "aarch64" ]; then
   ARCH=arm64
 fi
 VER=$1
-FILENAME=cli_$VER_linux_$ARCH.tar.gz
+FILENAME=cli_${VER}_linux_${ARCH}.tar.gz
 
-curl -O https://github.com/Infisical/cli/releases/download/v$VER/$FILENAME
+curl -LO https://github.com/Infisical/cli/releases/download/v$VER/$FILENAME
 mkdir -p ./infisical
 tar -xzf $FILENAME -C ./infisical
 mv ./infisical/infisical /usr/bin/
